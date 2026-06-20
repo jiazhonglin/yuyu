@@ -1,0 +1,41 @@
+@import "tailwindcss";
+
+/* 自定义动画 */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slideIn {
+  from { opacity: 0; transform: translateX(-20px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.3s ease-out;
+}
+
+.animate-slide-in {
+  animation: slideIn 0.3s ease-out;
+}
+
+/* 血糖等级颜色 */
+.glucose-low {
+  color: #3b82f6;
+  background-color: #eff6ff;
+}
+
+.glucose-normal {
+  color: #10b981;
+  background-color: #ecfdf5;
+}
+
+.glucose-high {
+  color: #f59e0b;
+  background-color: #fffbeb;
+}
+
+.glucose-very-high {
+  color: #ef4444;
+  background-color: #fef2f2;
+}
