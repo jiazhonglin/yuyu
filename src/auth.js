@@ -2,8 +2,8 @@
 const SESSION_KEY = 'blood_glucose_session';
 
 // 预设账号密码
-const PRESET_USERNAME = 'admin';
-const PRESET_PASSWORD = 'blood123';
+const PRESET_USERNAME = 'yuyu';
+const PRESET_PASSWORD = 'yuyu';
 
 // 检查是否已登录
 export function isLoggedIn() {
