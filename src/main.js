@@ -152,7 +152,7 @@ function renderRecordTab() {
   return `
     <!-- 添加记录表单 -->
     <div class="bg-white rounded-2xl shadow-sm p-6 mb-6">
-      <h2 class="text-lg font-semibold text-gray-800 mb-4">添加血糖记录</h2>
+      <h2 class="text-lg font-semibold text-gray-800 mb-4">添加血糖记录123</h2>
       <form id="recordForm" onsubmit="handleAddRecord(event)" class="space-y-4">
         <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
           <div>
