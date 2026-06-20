@@ -27,7 +27,17 @@ jobs:
       - name: Build
         run: npm run build 
 
-      # 4. 上传 dist 到服务器 (scp)
+      # 4. 清空服务器上的旧文件
+      - name: Clean old files
+        uses: appleboy/ssh-action@v1.1.0
+        with:
+          host: ${{ secrets.TENCENTLIGHTHOUSE_HOST }}
+          username: ${{ secrets.TENCENTLIGHTHOUSE_USER }}
+          key: ${{ secrets.TENCENTLIGHTHOUSE_KEY }}
+          port: ${{ secrets.TENCENTLIGHTHOUSE_PORT }}
+          script: rm -rf /home/deploy/apps/yuyu/*
+
+      # 5. 上传 dist 到服务器 (scp)
       - name: Copy files to server
         uses: appleboy/scp-action@v0.1.7
         with:
@@ -39,7 +49,7 @@ jobs:
           target: '/home/deploy/apps/yuyu'
           strip_components: 1
 
-      # 5. 验证部署结果
+      # 6. 验证部署结果
       - name: Verify deployment
         uses: appleboy/ssh-action@v1.1.0
         with:
