@@ -13,7 +13,7 @@ export function isLoggedIn() {
 // 登录
 export function login(username, password) {
   if (!username || !password) {
-    return { success: false, message: '请输入账号和密码' };
+    return { success: false, message: '请输入账号密码' };
   }
   
   if (username !== PRESET_USERNAME) {
